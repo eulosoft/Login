@@ -12,18 +12,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
+        android:text="@string/login"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="#080808"
-        android:textSize="50dp"
+        android:textSize="50sp"
         android:id="@+id/textView2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="USUARIO"
+        android:text="@string/usuario"
         android:id="@+id/textView"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
@@ -32,6 +32,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="text"
         android:id="@+id/etusuario"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
@@ -41,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="CONTRASEÑA"
+        android:text="@string/contrase_a"
         android:id="@+id/textView3"
         android:layout_below="@+id/etusuario"
         android:layout_alignParentStart="true" />
@@ -67,23 +68,22 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="INGRESAR"
+            android:text="@string/ingresar"
             android:id="@+id/button"
-            android:layout_alignParentStart="true"
             android:onClick="ingresar"
-            android:layout_weight="1"/>
+            android:layout_weight="0.9"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="REGISTRARSE"
+            android:layout_weight="1.3"
+            android:text="@string/registrarse"
             android:id="@+id/button2"
             android:onClick="registro" />
 
         <Button
             android:layout_width="0dp"
-             android:layout_weight="1"
+             android:layout_weight="0.8"
             android:layout_height="wrap_content"
             android:text="SALIR"
             android:id="@+id/button3"
