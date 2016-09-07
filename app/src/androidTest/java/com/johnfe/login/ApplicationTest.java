@@ -1,4 +1,4 @@
-package com.example.raul.login;
+package com.johnfe.login;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

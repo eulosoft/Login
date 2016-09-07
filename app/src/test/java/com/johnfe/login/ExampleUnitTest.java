@@ -1,4 +1,4 @@
-package com.example.raul.login;
+package com.johnfe.login;
 
 import org.junit.Test;
 
