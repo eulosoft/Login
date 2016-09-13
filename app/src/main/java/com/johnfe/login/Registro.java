@@ -12,14 +12,14 @@ import com.johnfe.login.R;
 
 public class Registro extends AppCompatActivity {
 
-      EditText et1,et2,et3;
+      EditText et2,et3;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registro);
-        et1= (EditText) findViewById(R.id.etcod);
+
         et2= (EditText) findViewById(R.id.etuser);
         et3= (EditText) findViewById(R.id.etcontra);
 
@@ -28,16 +28,11 @@ public class Registro extends AppCompatActivity {
 
         DBHelper admin=new DBHelper(this,"clase",null,1);
         SQLiteDatabase db=admin.getWritableDatabase();
-        String codigo=et1.getText().toString();
+
         String usuario=et2.getText().toString();
-        String contraseña=et3.getText().toString();
+        String contrasena=et3.getText().toString();
 
-        ContentValues values=new ContentValues();
-        values.put("codigo",codigo);
-        values.put("usuario",usuario);
-        values.put("contrasena",contraseña);
-
-        db.insert("usuarios",null,values);
+        db.execSQL("insert into usuarios (usuario,contrasena) values('"+usuario+"','"+contrasena+"')");
         db.close();
 
         Intent ven=new Intent(this,Main.class);
