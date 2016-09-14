@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.johnfe.login.R;
 
@@ -32,9 +33,11 @@ public class Registro extends AppCompatActivity {
         String usuario=et2.getText().toString();
         String contrasena=et3.getText().toString();
 
+
         db.execSQL("insert into usuarios (usuario,contrasena) values('"+usuario+"','"+contrasena+"')");
         db.close();
 
+        Toast.makeText(this,"Registro exitoso",Toast.LENGTH_SHORT).show();
         Intent ven=new Intent(this,Main.class);
         startActivity(ven);
 

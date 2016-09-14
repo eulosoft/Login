@@ -12,6 +12,6 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
-        Toast.makeText(this,"Bienvenido al menu",Toast.LENGTH_SHORT);
+        Toast.makeText(this,"Bienvenido al menu",Toast.LENGTH_SHORT).show();
     }
 }

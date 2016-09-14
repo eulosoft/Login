@@ -37,7 +37,7 @@ public class Main extends AppCompatActivity {
 
         if (fila.moveToFirst()){
             System.out.println("entro");
-            Toast.makeText(this,"Bienvenido",Toast.LENGTH_SHORT);
+            Toast.makeText(this,"consulto la db",Toast.LENGTH_SHORT).show();
             String usua=fila.getString(0);
             String pass=fila.getString(1);
             if (usuario.equals(usua)&&contrasena.equals(pass)){
@@ -46,13 +46,13 @@ public class Main extends AppCompatActivity {
                 etUsuario.setText("");
                 etPassword.setText("");
             }else{
-                Toast.makeText(this,"No existe usuario 1",Toast.LENGTH_SHORT);
+                Toast.makeText(this,"No existe usuario 1",Toast.LENGTH_SHORT).show();
 
             }
 
         }else {
 
-            Toast.makeText(this,"No existe usuario 2",Toast.LENGTH_SHORT);
+            Toast.makeText(this,"No existe usuario 2",Toast.LENGTH_SHORT).show();
         }
 
 
